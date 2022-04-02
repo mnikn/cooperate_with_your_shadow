@@ -7,7 +7,7 @@
 extents = Vector2( 9.5, 3.5 )
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 9.5, 1.9375 )
+extents = Vector2( 11.5, 1.9375 )
 
 [node name="Trigger" type="StaticBody2D" groups=["trigger"]]
 scale = Vector2( 2, 2 )

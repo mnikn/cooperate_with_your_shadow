@@ -4,10 +4,10 @@
 [ext_resource path="res://src/items/Trigger.tscn" type="PackedScene" id=4]
 
 [node name="Level" instance=ExtResource( 1 )]
+next_scene_path = "res://src/levels/Level3.tscn"
 
 [node name="Door" parent="." index="1"]
 position = Vector2( 610, 261 )
-frame = 0
 
 [node name="Trigger" parent="." index="2" instance=ExtResource( 4 )]
 position = Vector2( 389, 593 )

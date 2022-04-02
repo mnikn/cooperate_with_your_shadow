@@ -22,6 +22,6 @@ func check_win():
 		yield($Door, "animation_finished")
 		$Door.play("opened")
 		
-		yield(self.get_tree().create_timer(2.0), "timeout")
+		yield(self.get_tree().create_timer(2.5), "timeout")
 		if self.next_scene_path != null:
 			SceneChanger.change_scene(self.next_scene_path)

@@ -106,3 +106,4 @@ text = "Level10"
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/Layout/Level1" to="." method="_on_Level1_pressed"]
 [connection signal="pressed" from="PanelContainer/MarginContainer/Layout/Level2" to="." method="_on_Level2_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Layout/Level3" to="." method="_on_Level3_pressed"]
