@@ -10,6 +10,8 @@ func _ready():
 		if node.is_in_group("trigger"):
 			trigger_nodes.push_back(node)
 			node.connect("trigger_changed", self, "check_win")
+	TweenUtils.audio_fade_in($BgmPlayer)
+	$BgmPlayer.play()
 
 func check_win():
 	var is_win = true
