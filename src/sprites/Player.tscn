@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/sprites/BaseSprite.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/sprites/Player.gd" type="Script" id=2]
+
+[node name="Player" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+current = true
+limit_left = 0
+limit_top = 0
+limit_bottom = 720
+limit_smoothed = true
