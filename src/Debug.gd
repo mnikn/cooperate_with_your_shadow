@@ -18,3 +18,7 @@ func _ready():
 
 func _on_Level1_pressed():
 	SceneChanger.change_scene("res://src/levels/Level1.tscn")
+
+
+func _on_Level2_pressed():
+	SceneChanger.change_scene("res://src/levels/Level2.tscn")
