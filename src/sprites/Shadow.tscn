@@ -4,5 +4,5 @@
 [ext_resource path="res://src/sprites/Shadow.gd" type="Script" id=2]
 
 [node name="Shadow" instance=ExtResource( 1 )]
-modulate = Color( 0.0823529, 0.113725, 0.156863, 1 )
+modulate = Color( 0.196078, 0.254902, 0.337255, 1 )
 script = ExtResource( 2 )
