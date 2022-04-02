@@ -18,17 +18,33 @@ _global_script_classes=[ {
 "class": "DictionaryUtils",
 "language": "GDScript",
 "path": "res://src/utils/Dictionary.gd"
+}, {
+"base": "Node",
+"class": "NodeUtils",
+"language": "GDScript",
+"path": "res://src/utils/Node.gd"
+}, {
+"base": "Node",
+"class": "TweenUtils",
+"language": "GDScript",
+"path": "res://src/utils/Tween.gd"
 } ]
 _global_script_class_icons={
 "ArrayUtils": "",
-"DictionaryUtils": ""
+"DictionaryUtils": "",
+"NodeUtils": "",
+"TweenUtils": ""
 }
 
 [application]
 
 config/name="Cooperate With Your Shadow"
-run/main_scene="res://src/levels/BaseLevel.tscn"
+run/main_scene="res://src/Debug.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+SceneChanger="*res://src/platform/SceneChanger.tscn"
 
 [display]
 
