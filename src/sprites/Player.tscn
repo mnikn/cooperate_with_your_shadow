@@ -13,3 +13,5 @@ limit_top = 0
 limit_right = 1280
 limit_bottom = 720
 limit_smoothed = true
+
+[node name="SoundEffectPlayer" type="AudioStreamPlayer" parent="." index="3"]
