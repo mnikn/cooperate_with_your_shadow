@@ -46,6 +46,10 @@ func do_move(delta):
 		$Sprite.flip_h = true
 	elif velocity.x > 0:
 		$Sprite.flip_h = false
+	if velocity.x == 0:
+		$Sprite.play("idle")
+	else:
+		$Sprite.play("run")
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func get_gravity() -> float:
