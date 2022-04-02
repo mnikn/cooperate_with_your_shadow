@@ -12,6 +12,8 @@ onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * 
 onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
 onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
 
+var enabled = true
+
 # store commands, thus we can use it for delay
 var commands = []
 
@@ -22,6 +24,8 @@ func _physics_process(delta):
 		self.add_command("player_right")
 	if Input.is_action_just_pressed("player_jump"):
 		self.add_command("player_jump")
+	if not self.enabled:
+		self.commands = []
 		
 	# cal need delay time
 	for action in self.commands:
