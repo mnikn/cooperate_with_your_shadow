@@ -25,3 +25,9 @@ func check_win():
 		yield(self.get_tree().create_timer(2.5), "timeout")
 		if self.next_scene_path != null:
 			SceneChanger.change_scene(self.next_scene_path)
+
+
+func _on_Ground_body_entered(body):
+	print_debug("lose!")
+	yield(self.get_tree().create_timer(0.5), "timeout")
+	SceneChanger.change_scene(self.get_tree().current_scene.filename)
