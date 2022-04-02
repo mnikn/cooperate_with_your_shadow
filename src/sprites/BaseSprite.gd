@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var move_speed = 300.0
+export var move_speed = 320.0
 
 var velocity := Vector2.ZERO
 
@@ -38,18 +38,28 @@ func do_move(delta):
 	velocity.y += get_gravity() * delta
 	velocity.x = get_input_velocity() * move_speed
 	
+	if is_on_floor():
+		if velocity.x == 0:
+			$Sprite.play("idle")
+		else:
+			$Sprite.play("run")
+	
 	var action_jump = self.find_action("player_jump")
 	if action_jump != null and is_on_floor():
+#		$Sprite.play("jump_prepare")
 		jump()
+	
+	if velocity.y < 0:
+		$Sprite.play("jump_floating")
+		
+	if velocity.y >= 0 and not is_on_floor():
+		$Sprite.play("jump_falldown")
 	
 	if velocity.x < 0:
 		$Sprite.flip_h = true
 	elif velocity.x > 0:
 		$Sprite.flip_h = false
-	if velocity.x == 0:
-		$Sprite.play("idle")
-	else:
-		$Sprite.play("run")
+		
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 func get_gravity() -> float:
