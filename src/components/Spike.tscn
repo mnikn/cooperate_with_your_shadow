@@ -90,9 +90,10 @@ tracks/1/keys = {
 "values": [ true, false ]
 }
 
-[node name="Spike" type="StaticBody2D"]
+[node name="Spike" type="Area2D"]
 scale = Vector2( 2, 2 )
 collision_layer = 0
+monitorable = false
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -117,4 +118,5 @@ anims/showing = SubResource( 12 )
 wait_time = 2.0
 autostart = true
 
+[connection signal="body_shape_entered" from="." to="." method="_on_Spike_body_shape_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
