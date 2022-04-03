@@ -5,6 +5,9 @@ export (String, FILE) var next_scene_path = null
 
 var trigger_nodes = []
 func _ready():
+	if self.name in ["Level1", "Level2", "Level3", "Level4", "Level5", "Level6"]:
+		$GUI.visible = false
+		$Shadow.enabled_delay_control = false
 	$Shadow.init($Player)
 	for node in self.get_children():
 		if node.is_in_group("trigger"):
