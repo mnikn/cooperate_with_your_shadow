@@ -6,6 +6,7 @@ var jump_effect = preload("res://assets/audio/jump.ogg")
 var jump_falldown_effect = preload("res://assets/audio/jump_falldown.ogg")
 
 var run_smoke_scene = preload("res://src/sprites/RunSmoke.tscn")
+var jump_smoke_scene = preload("res://src/sprites/JumpSmoke.tscn")
 var run_smoke
 var run_smoke_dismiss_timer
 
@@ -40,6 +41,22 @@ func add_command(command: String):
 	if command == "player_jump":
 		if self.run_smoke != null and self.run_smoke_dismiss_timer == null:
 			self.remove_run_smoke()
+			
+		if self.is_on_floor():
+			var node = self.jump_smoke_scene.instance()
+			node.play("brust")
+			var modify = Vector2.ZERO
+			if Input.is_action_pressed("player_left"):
+				modify.x -= 15
+				modify.y -= 45
+				node.rotation_degrees = 290
+			elif Input.is_action_pressed("player_right"):
+				modify.x = 15
+				modify.y -= 45
+				node.rotation_degrees = 70
+			node.global_position = Vector2(self.global_position.x + modify.x, self.global_position.y + 50 + modify.y) 
+			node.connect("animation_finished", self, "remove_node", [node])
+			self.get_parent().add_child(node)
 	
 	if command == "player_right" or command == "player_left":
 		if self.run_smoke == null and self.is_on_floor():
@@ -63,3 +80,8 @@ func remove_run_smoke():
 	self.run_smoke.queue_free()
 	self.run_smoke = null
 	self.run_smoke_dismiss_timer = null
+
+func remove_node(node):
+	if node == null:
+		return
+	node.queue_free()

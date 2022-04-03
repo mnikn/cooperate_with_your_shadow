@@ -318,5 +318,5 @@ animations = [ {
 
 [node name="RunSmoke" type="AnimatedSprite"]
 frames = SubResource( 98 )
-frame = 10
+frame = 4
 playing = true
