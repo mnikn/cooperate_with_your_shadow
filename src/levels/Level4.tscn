@@ -8,7 +8,7 @@ next_scene_path = "res://src/levels/Level5.tscn"
 
 [node name="Door" parent="." index="1"]
 position = Vector2( 1156, 421 )
-frame = 0
+frame = 1
 
 [node name="Player" parent="." index="2"]
 position = Vector2( 247, 609 )
