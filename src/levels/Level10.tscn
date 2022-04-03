@@ -5,11 +5,10 @@
 [ext_resource path="res://src/components/Spike.tscn" type="PackedScene" id=3]
 
 [node name="Level10" instance=ExtResource( 1 )]
-next_scene_path = "res://src/GameEnd.gd"
+next_scene_path = "res://src/GameEnd.tscn"
 
 [node name="Door" parent="." index="1"]
 position = Vector2( 1042, 581 )
-frame = 1
 
 [node name="Player" parent="." index="2"]
 position = Vector2( 247, 609 )
