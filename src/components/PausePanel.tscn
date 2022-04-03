@@ -96,3 +96,4 @@ script = ExtResource( 1 )
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Restart" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Title" to="." method="_on_Title_pressed"]
