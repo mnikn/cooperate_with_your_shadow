@@ -11,6 +11,7 @@ next_scene_path = "res://src/levels/Level2.tscn"
 
 [node name="Door" parent="." index="1"]
 position = Vector2( 615, 548 )
+frame = 1
 
 [node name="Trigger" parent="." index="2" instance=ExtResource( 4 )]
 position = Vector2( 339, 592 )
