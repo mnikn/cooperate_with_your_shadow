@@ -35,3 +35,11 @@ static func visible_fade_in(node, duration = 2):
 	tween.start()
 	yield(tween, "tween_all_completed")
 	tween.queue_free()
+
+static func tween_property(node, property, target_val, duration = 2):
+	var tween = Tween.new()
+	node.add_child(tween)
+	tween.interpolate_property(node, property, node[property], target_val, duration, Tween.TRANS_LINEAR)
+	tween.start()
+	yield(tween, "tween_all_completed")
+	tween.queue_free()

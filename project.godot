@@ -45,6 +45,7 @@ config/icon="res://icon.png"
 [autoload]
 
 SceneChanger="*res://src/platform/SceneChanger.tscn"
+GameManager="*res://src/platform/GameManager.gd"
 
 [display]
 
