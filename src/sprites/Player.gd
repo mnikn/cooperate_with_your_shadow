@@ -32,30 +32,27 @@ func _physics_process(delta):
 			$SoundEffectPlayer.play()
 	
 	if $Sprite.animation == "idle" and self.run_smoke != null and self.run_smoke_dismiss_timer == null:
-		self.run_smoke.frame = 26
-		self.run_smoke_dismiss_timer = self.get_tree().create_timer(0.1)
+		self.run_smoke.frame = 35
+		self.run_smoke_dismiss_timer = self.get_tree().create_timer(0.2)
 		run_smoke_dismiss_timer.connect("timeout", self, "remove_run_smoke")
 
 func add_command(command: String):
 	if command == "player_jump":
-		print_debug(command)
 		if self.run_smoke != null and self.run_smoke_dismiss_timer == null:
-			self.run_smoke.frame = 26
-			self.run_smoke_dismiss_timer = self.get_tree().create_timer(0.1)
-			run_smoke_dismiss_timer.connect("timeout", self, "remove_run_smoke")
+			self.remove_run_smoke()
 	
 	if command == "player_right" or command == "player_left":
 		if self.run_smoke == null and self.is_on_floor():
 			self.run_smoke = self.run_smoke_scene.instance()
-			self.run_smoke.position = Vector2(-40, 10)
+			self.run_smoke.position = Vector2(-40, 13)
 			self.add_child(self.run_smoke)
-			self.run_smoke.play("default")
+			self.run_smoke.play("brust")
 		if self.run_smoke != null:
 			if command == "player_right":
-				self.run_smoke.position = Vector2(-40, 10)
+				self.run_smoke.position = Vector2(-40, 13)
 				self.run_smoke.flip_h = false
 			elif command == "player_left":
-				self.run_smoke.position = Vector2(40, 10)
+				self.run_smoke.position = Vector2(40, 13)
 				self.run_smoke.flip_h = true
 	.add_command(command)
 
