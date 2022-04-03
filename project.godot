@@ -39,7 +39,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Cooperate With Your Shadow"
-run/main_scene="res://src/Debug.tscn"
+run/main_scene="res://src/Main.tscn"
 config/icon="res://assets/icon.png"
 config/windows_native_icon="res://assets/icon.ico"
 
