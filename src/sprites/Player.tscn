@@ -6,9 +6,6 @@
 [node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
-[node name="Sprite" parent="." index="0"]
-frame = 0
-
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 current = true
 limit_left = 0
@@ -18,3 +15,4 @@ limit_bottom = 720
 limit_smoothed = true
 
 [node name="SoundEffectPlayer" type="AudioStreamPlayer" parent="." index="3"]
+volume_db = 0.2

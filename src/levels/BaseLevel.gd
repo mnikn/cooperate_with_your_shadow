@@ -30,6 +30,11 @@ func check_win():
 
 
 func _on_Ground_body_entered(body):
-	print_debug("lose!")
 	yield(self.get_tree().create_timer(0.5), "timeout")
 	SceneChanger.change_scene(self.get_tree().current_scene.filename)
+
+
+func _process(delta):
+	$GUI/MarginContainer/HBoxContainer/Delay/Value.text = "{value} s".format({
+		"value": $Shadow.delay
+	})
