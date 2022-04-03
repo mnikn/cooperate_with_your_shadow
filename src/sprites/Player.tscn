@@ -6,6 +6,9 @@
 [node name="Player" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
+[node name="Sprite" parent="." index="0"]
+frame = 0
+
 [node name="Camera2D" type="Camera2D" parent="." index="2"]
 current = true
 limit_left = 0

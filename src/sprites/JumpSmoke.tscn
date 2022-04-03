@@ -210,6 +210,6 @@ animations = [ {
 [node name="JumpSmoke" type="AnimatedSprite"]
 frames = SubResource( 98 )
 animation = "brust"
-frame = 34
+frame = 47
 playing = true
 script = ExtResource( 2 )

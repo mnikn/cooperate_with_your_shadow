@@ -14,6 +14,7 @@ func _ready():
 	footstep_effect.loop = false
 	jump_effect.loop = false
 	jump_falldown_effect.loop = false
+	$Sprite.modulate = Color("#fff")
 
 func _physics_process(delta):
 	if self.is_on_floor() and $SoundEffectPlayer.stream == jump_effect:
@@ -85,3 +86,8 @@ func remove_node(node):
 	if node == null:
 		return
 	node.queue_free()
+
+func dead():
+	self.enabled = false
+	$AnimationPlayer.play("dead")
+	yield($AnimationPlayer, "animation_finished")

@@ -19,26 +19,23 @@ func _ready():
 func _on_Level1_pressed():
 	SceneChanger.change_scene("res://src/levels/Level1.tscn")
 
-
 func _on_Level2_pressed():
 	SceneChanger.change_scene("res://src/levels/Level2.tscn")
-
 
 func _on_Level3_pressed():
 	SceneChanger.change_scene("res://src/levels/Level3.tscn")
 
-
 func _on_Level4_pressed():
 	SceneChanger.change_scene("res://src/levels/Level4.tscn")
-
 
 func _on_Level5_pressed():
 	SceneChanger.change_scene("res://src/levels/Level5.tscn")
 
-
 func _on_Level6_pressed():
 	SceneChanger.change_scene("res://src/levels/Level6.tscn")
 
-
 func _on_Level7_pressed():
 	SceneChanger.change_scene("res://src/levels/Level7.tscn")
+
+func _on_Level8_pressed():
+	SceneChanger.change_scene("res://src/levels/Level8.tscn")

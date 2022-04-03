@@ -40,6 +40,7 @@ custom_constants/line_separation = 6
 custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "You need to cooperte with your shadow, triggered all trigger to open the door. But  beacuse is your shadow, so your shadow DELAY IS INEVITABLE! "
+text = "You need to cooperte with your shadow, triggered all trigger to open the door. But  beacuse is your shadow, so your shadow DELAY IS INEVITABLE! "
 scroll_active = false
 
 [connection signal="popup_hide" from="." to="." method="_on_Dialogue_popup_hide"]
